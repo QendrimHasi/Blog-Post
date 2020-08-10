@@ -1,0 +1,683 @@
+{
+	"info": {
+		"_postman_id": "6ba3fb5f-3eef-4fa7-ab35-64e300a0a4ab",
+		"name": "blog",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8080/user",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Qendrim\",\r\n    \"lastname\": \"Hasi\",\r\n    \"email\": \"qendrim.hasi@hotmail.com\",\r\n    \"password\": \"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users"
+					]
+				},
+				"description": "User Register Blog"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"qendrim.hasi@hotmail.com\",\r\n    \"password\": \"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"login"
+					]
+				},
+				"description": "User Login blog"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/users/10",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJxZW5kcmltLmhhc2lAaG90bWFpbC5jb20iLCJleHAiOjE1OTc5MTE0NjZ9.4Tfp-HdFjlT5aggr31AajIp01uQegMzVZxs1rHRGN2fPEI-nEvX8_jVKxzNDAM3x_Qf_E5OaDXXGxvcQpTN7JQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/users/42",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users",
+						"42"
+					]
+				},
+				"description": "get a specific user Blog"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/users/8",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJxZW5kcmltLmhhc2lAaG90bWFpbC5jb20iLCJleHAiOjE1OTY3OTI3OTl9.9rb1Trvt-BBD__bZ8HJMxzLFuSSzZNHz3nBg6qk0z4BlOZb-v3HVaov2cbGhjjMwtEVbBgFkTFetEsb2HGNZ6g",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Qendrim\",\r\n    \"lastname\": \"Hasi\",\r\n    \"email\": \"qendrim.hasi@hotmail.com\",\r\n    \"password\": \"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/users/11",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users",
+						"11"
+					]
+				},
+				"description": "Update User Blog"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/users/8",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJxZW5kcmltLmhhc2lAaG90bWFpbC5jb20iLCJleHAiOjE1OTY3OTI3OTl9.9rb1Trvt-BBD__bZ8HJMxzLFuSSzZNHz3nBg6qk0z4BlOZb-v3HVaov2cbGhjjMwtEVbBgFkTFetEsb2HGNZ6g",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/users/39",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users",
+						"39"
+					]
+				},
+				"description": "Delete User Blog"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/posts",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJxZW5kcmltLmhhc2lAaG90bWFpbC5jb20iLCJleHAiOjE1OTY3OTI3OTl9.9rb1Trvt-BBD__bZ8HJMxzLFuSSzZNHz3nBg6qk0z4BlOZb-v3HVaov2cbGhjjMwtEVbBgFkTFetEsb2HGNZ6g",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"post 2\",\r\n    \"description\": \"sdkfjghsdfjkghkjsdfhgj\",\r\n    \"userId\": 42\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/posts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"posts"
+					]
+				},
+				"description": "save Post Blog"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/posts/14",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJxZW5kcmltLmhhc2lAaG90bWFpbC5jb20iLCJleHAiOjE1OTY3OTI3OTl9.9rb1Trvt-BBD__bZ8HJMxzLFuSSzZNHz3nBg6qk0z4BlOZb-v3HVaov2cbGhjjMwtEVbBgFkTFetEsb2HGNZ6g",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"post 5\",\r\n    \"description\": \"sdkfjghsdfjkdfgdhfgjdfhgghkjsdfhgj\",\r\n    \"userId\": 11\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/posts/35",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"posts",
+						"35"
+					]
+				},
+				"description": "Update Post Blog"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/posts/14",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJxZW5kcmltLmhhc2lAaG90bWFpbC5jb20iLCJleHAiOjE1OTc5MTE0NjZ9.4Tfp-HdFjlT5aggr31AajIp01uQegMzVZxs1rHRGN2fPEI-nEvX8_jVKxzNDAM3x_Qf_E5OaDXXGxvcQpTN7JQ",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/posts/43",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"posts",
+						"43"
+					]
+				},
+				"description": "Get a specifik post Blog"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/posts/14",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJxZW5kcmltLmhhc2lAaG90bWFpbC5jb20iLCJleHAiOjE1OTYxODUzMDB9.nizaUXOKs3-MEHuKpseO06xJTmbgwELDV7BTXyzrWCI3PHT7rLzZ7yv3F4kVpSx-2mhodw0QEJt-KOA44hoJdQ",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/posts/12",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"posts",
+						"12"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				},
+				"description": "Delete e specifik post Blog"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/posts/?page=1&limit=25",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJxZW5kcmltLmhhc2lAaG90bWFpbC5jb20iLCJleHAiOjE1OTc5MTE0NjZ9.4Tfp-HdFjlT5aggr31AajIp01uQegMzVZxs1rHRGN2fPEI-nEvX8_jVKxzNDAM3x_Qf_E5OaDXXGxvcQpTN7JQ",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/posts/?page=1&limit=54",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"posts",
+						""
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "limit",
+							"value": "54"
+						}
+					]
+				},
+				"description": "Get posts with pagination Blog"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/posts/upload/12",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJxZW5kcmltLmhhc2lAaG90bWFpbC5jb20iLCJleHAiOjE1OTc5MTE0NjZ9.4Tfp-HdFjlT5aggr31AajIp01uQegMzVZxs1rHRGN2fPEI-nEvX8_jVKxzNDAM3x_Qf_E5OaDXXGxvcQpTN7JQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/windows/Desktop/18.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/posts/upload/43",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"posts",
+						"upload",
+						"43"
+					]
+				},
+				"description": "Save ime to e specific post blog"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/comments",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJxZW5kcmltLmhhc2lAaG90bWFpbC5jb20iLCJleHAiOjE1OTY3OTI3OTl9.9rb1Trvt-BBD__bZ8HJMxzLFuSSzZNHz3nBg6qk0z4BlOZb-v3HVaov2cbGhjjMwtEVbBgFkTFetEsb2HGNZ6g",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"text\": \"Kommenti i dyte\",\r\n    \"postId\": 43,\r\n    \"userId\": 42\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/comment",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"comment"
+					]
+				},
+				"description": "Create coment Blog"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/comment/27",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJxZW5kcmltLmhhc2lAaG90bWFpbC5jb20iLCJleHAiOjE1OTc5MTE0NjZ9.4Tfp-HdFjlT5aggr31AajIp01uQegMzVZxs1rHRGN2fPEI-nEvX8_jVKxzNDAM3x_Qf_E5OaDXXGxvcQpTN7JQ",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/comment/49",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"comment",
+						"49"
+					]
+				},
+				"description": "Get a specific comment Blog"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/comment/19",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJxZW5kcmltLmhhc2lAaG90bWFpbC5jb20iLCJleHAiOjE1OTY3OTI3OTl9.9rb1Trvt-BBD__bZ8HJMxzLFuSSzZNHz3nBg6qk0z4BlOZb-v3HVaov2cbGhjjMwtEVbBgFkTFetEsb2HGNZ6g",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"text\": \"Kommenti i 5\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/comment/19",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"comment",
+						"19"
+					]
+				},
+				"description": "update comment Blog"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/comment/17",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJxZW5kcmltLmhhc2lAaG90bWFpbC5jb20iLCJleHAiOjE1OTY3OTI3OTl9.9rb1Trvt-BBD__bZ8HJMxzLFuSSzZNHz3nBg6qk0z4BlOZb-v3HVaov2cbGhjjMwtEVbBgFkTFetEsb2HGNZ6g",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/comment/17",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"comment",
+						"17"
+					]
+				},
+				"description": "Delete a comment Blog"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/comment/replie",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJxZW5kcmltLmhhc2lAaG90bWFpbC5jb20iLCJleHAiOjE1OTc5MTE0NjZ9.4Tfp-HdFjlT5aggr31AajIp01uQegMzVZxs1rHRGN2fPEI-nEvX8_jVKxzNDAM3x_Qf_E5OaDXXGxvcQpTN7JQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"text\": \"replie i tret\",\r\n    \"commentId\": 49,\r\n    \"userId\": 42\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/comment/replie",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"comment",
+						"replie"
+					]
+				},
+				"description": "create a replie blog"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/comment/replie/36",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJxZW5kcmltLmhhc2lAaG90bWFpbC5jb20iLCJleHAiOjE1OTY3OTI3OTl9.9rb1Trvt-BBD__bZ8HJMxzLFuSSzZNHz3nBg6qk0z4BlOZb-v3HVaov2cbGhjjMwtEVbBgFkTFetEsb2HGNZ6g",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"text\": \"Replie i 5\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/comment/replie/36",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"comment",
+						"replie",
+						"36"
+					]
+				},
+				"description": "update a creplie Blog"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/comment/replie/36",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJxZW5kcmltLmhhc2lAaG90bWFpbC5jb20iLCJleHAiOjE1OTc5MTE0NjZ9.4Tfp-HdFjlT5aggr31AajIp01uQegMzVZxs1rHRGN2fPEI-nEvX8_jVKxzNDAM3x_Qf_E5OaDXXGxvcQpTN7JQ",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/comment/replie/47",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"comment",
+						"replie",
+						"47"
+					]
+				},
+				"description": "get a replie Blog"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/comment/replie/36",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJxZW5kcmltLmhhc2lAaG90bWFpbC5jb20iLCJleHAiOjE1OTY3OTI3OTl9.9rb1Trvt-BBD__bZ8HJMxzLFuSSzZNHz3nBg6qk0z4BlOZb-v3HVaov2cbGhjjMwtEVbBgFkTFetEsb2HGNZ6g",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/comment/replie/36",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"comment",
+						"replie",
+						"36"
+					]
+				},
+				"description": "Delete a replie Blog"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/images/5ea6024a-0826-4b35-915e-49e08794a8b1.jpeg",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/images/5ea6024a-0826-4b35-915e-49e08794a8b1.jpeg",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"images",
+						"5ea6024a-0826-4b35-915e-49e08794a8b1.jpeg"
+					]
+				},
+				"description": "Get post image from server whith out Authorization Blog"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
